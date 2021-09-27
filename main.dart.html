@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>main.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:firebase_auth/firebase_auth.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:flutter/services.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:provider/provider.dart'</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">'apis/authentication_service.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'screens/adminHome.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'screens/splash_screen.dart'</span><span class="s2">;</span>
+
+<span class="s3">// void main() {</span>
+<span class="s3">//   runApp(MyApp());</span>
+<span class="s3">// }</span>
+
+<span class="s2">void </span><span class="s0">main() {</span>
+  <span class="s0">WidgetsFlutterBinding.ensureInitialized()</span><span class="s2">;</span>
+  <span class="s0">SystemChrome.setPreferredOrientations(</span>
+      <span class="s0">[DeviceOrientation.portraitUp</span><span class="s2">, </span><span class="s0">DeviceOrientation.portraitDown]).then((_) {</span>
+    <span class="s0">runApp(</span>
+      <span class="s0">MultiProvider(</span>
+        <span class="s3">// providers: [</span>
+        <span class="s3">// ChangeNotifierProvider(</span>
+        <span class="s3">//   create: (_) =&gt; AuthNotifier(),</span>
+        <span class="s3">// ),</span>
+        <span class="s3">// ChangeNotifierProvider(</span>
+        <span class="s3">//   create: (_) =&gt; FoodNotifier(),</span>
+        <span class="s3">// ),</span>
+        <span class="s3">// ],</span>
+        <span class="s0">providers: [</span>
+          <span class="s0">Provider&lt;AuthenticationService&gt;(</span>
+            <span class="s0">create: (_) =&gt; AuthenticationService(FirebaseAuth.instance)</span><span class="s2">,</span>
+          <span class="s0">)</span><span class="s2">,</span>
+          <span class="s0">StreamProvider(</span>
+            <span class="s0">create: (context) =&gt;</span>
+                <span class="s0">context.read&lt;AuthenticationService&gt;().authStateChanges</span><span class="s2">,</span>
+            <span class="s0">initialData: </span><span class="s2">null,</span>
+          <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">]</span><span class="s2">,</span>
+        <span class="s0">child: MaterialApp(</span>
+          <span class="s0">home: Scaffold(body: MyApp())</span><span class="s2">,</span>
+        <span class="s0">)</span><span class="s2">,</span>
+        <span class="s3">// MyApp(),</span>
+      <span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">})</span><span class="s2">;</span>
+<span class="s0">}</span>
+
+<span class="s2">class </span><span class="s0">MyApp </span><span class="s2">extends </span><span class="s0">StatelessWidget {</span>
+  <span class="s0">@override</span>
+  <span class="s0">Widget build(BuildContext context) {</span>
+    <span class="s2">final </span><span class="s0">firebaseUser = context.watch&lt;FirebaseUser&gt;()</span><span class="s2">;</span>
+    <span class="s3">//ajouter la vue quand l'utilsateur est  connecté ici</span>
+    <span class="s2">if </span><span class="s0">(firebaseUser != </span><span class="s2">null</span><span class="s0">) {</span>
+      <span class="s2">return </span><span class="s0">AdminHomePage()</span><span class="s2">;</span>
+    <span class="s0">} </span><span class="s2">else </span><span class="s0">{</span>
+      <span class="s2">return </span><span class="s0">SplashScreen()</span><span class="s2">;</span>
+    <span class="s0">}</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

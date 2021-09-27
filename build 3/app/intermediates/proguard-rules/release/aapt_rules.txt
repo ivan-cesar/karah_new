@@ -1,0 +1,35 @@
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:23
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:182
+-keep class com.google.android.gms.auth.api.signin.RevocationBoundService { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:173
+-keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:187
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:161
+-keep class com.google.android.gms.measurement.AppMeasurementJobService { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:151
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:157
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:137
+-keep class com.google.firebase.auth.internal.FederatedSignInActivity { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:70
+-keep class com.google.firebase.components.ComponentDiscoveryService { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:145
+-keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:28
+-keep class com.propulse.karah.MainActivity { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:113
+-keep class com.razorpay.CheckoutActivity { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:167
+-keep class com.razorpay.RzpTokenReceiver { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:23
+-keep class io.flutter.app.FlutterApplication { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:127
+-keep class io.flutter.plugins.share.ShareFileProvider { <init>(); }
+# Referenced at /Users/macbookair/Documents/karah/build/app/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:109
+-keep class io.flutter.plugins.urllauncher.WebViewActivity { <init>(); }
+# Referenced at /Users/macbookair/.gradle/caches/transforms-2/files-2.1/0275ed00785136fdf85e6b97a26c19f4/checkout-1.6.10/res/layout/rzp_loader.xml:20
+-keep class com.razorpay.CircularProgressView { <init>(...); }
+
